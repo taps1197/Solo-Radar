@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soloradarapp/srceens/getting_started_screen.dart';
+import 'package:soloradarapp/srceens/splash_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget{
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
-      home: GettingStartedScreen(),
+      home: SplashScreen(),
     );
   }
 }

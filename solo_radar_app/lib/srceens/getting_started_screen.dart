@@ -118,7 +118,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                  Text('Have an account ?',style: TextStyle(fontSize: 18),),
+                  Text('Have an account?',style: TextStyle(fontSize: 18),),
                   FlatButton(child: Text(
                     'Login',
                     style: TextStyle(
