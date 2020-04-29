@@ -49,40 +49,42 @@ class _splashScreenState extends State<SplashScreen>{
 
   @override
   Widget build(BuildContext Context){
-    return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                width: 220,
-                height: 220,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('images/logo.png'),
-                    fit: BoxFit.cover,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 220,
+                  height: 220,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('images/logo.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-              Text(
-                'The Social Distancing App',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              )
-            ],
-          )
-        ],
+                Text(
+                  'The Social Distancing App',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
