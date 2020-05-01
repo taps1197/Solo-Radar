@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:soloradarapp/model/onboarding.dart';
+import 'package:soloradarapp/srceens/login_screen.dart';
 import 'package:soloradarapp/widgets/slideitem.dart';
 import 'dart:async';
 import 'package:soloradarapp/widgets/slide_dots.dart';
@@ -50,7 +51,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          color: Colors.grey[100],
+          color: Colors.grey[200],
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -127,9 +128,14 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                           color: Theme.of(context).primaryColor,
                       ),
                     ),
+                      onPressed: () {
+                      Navigator.of(context).pushNamed(LoginScreen.routeName);
+                      },
                     ),
-                  ],)
-                ],)
+                  ],
+                  )
+                ],
+                )
               ],
             ),
           ),
