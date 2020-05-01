@@ -4,12 +4,7 @@ import 'package:soloradarapp/srceens/getting_started_screen.dart';
 import 'package:soloradarapp/srceens/login_screen.dart';
 import 'package:soloradarapp/srceens/splash_screen.dart';
 
-void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_){
-  runApp(MyApp());
-  });
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
   @override
