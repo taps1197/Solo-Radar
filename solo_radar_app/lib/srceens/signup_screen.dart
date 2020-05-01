@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soloradarapp/srceens/login_screen.dart';
+import 'package:soloradarapp/srceens/otp_verification_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   static const routeName ='/Signup';
@@ -104,7 +105,9 @@ class SignupScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               RaisedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).pushNamed(OtpScreen.routeName);
+                                },
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
                                 padding: EdgeInsets.all(0.0),
                                 child: Ink(
