@@ -1,16 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:soloradarapp/srceens/signup_screen.dart';
+import 'package:soloradarapp/srceens/login_screen.dart';
 
-class LoginScreen extends StatelessWidget{
-  static const routeName ='/login';
+class SignupScreen extends StatelessWidget {
+  static const routeName ='/Signup';
+  bool checkBoxValue = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints viewportConstraints){
-            return Container(
+          body: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints viewportConstraints){
+              return Container(
                 padding: const EdgeInsets.all(15),
                 color: Colors.grey[200],
                 width: double.infinity,
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget{
                               ),
                               SizedBox(height: 37,),
                               Text(
-                                'Log In',
+                                'Sign Up',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.w600,
@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget{
                                   horizontal: 20,
                                 ),
                                 child: Text(
-                                  'Log in to your existing account to lorem ipsum so lo em',
+                                  'Create account now to lorem ipsum dolor emit sol',
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.black,
@@ -77,6 +77,30 @@ class LoginScreen extends StatelessWidget{
                           ),
                           SizedBox(height: 40,),
                           Column(
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                   Checkbox(
+                                     value: checkBoxValue,
+                                     onChanged: (bool value){
+                                       checkBoxValue=value;
+                                     },
+                                   ),
+                                   Text(
+                                    'I agree to Terms and Conditions',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.black54,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 20,),
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               RaisedButton(
@@ -95,7 +119,7 @@ class LoginScreen extends StatelessWidget{
                                     constraints: BoxConstraints(maxWidth: 160.0, minHeight: 45.0),
                                     alignment: Alignment.center,
                                     child: Text(
-                                      "LOGIN",
+                                      "SIGN UP",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         color: Colors.white,
@@ -108,11 +132,17 @@ class LoginScreen extends StatelessWidget{
                               SizedBox(height: 10,),
                               Column(
                                 children: <Widget>[
-                                  Text(
-                                    ' We will send you a one time SMS message.',
-                                    style: TextStyle(
-                                      color: Colors.black54,
-                                      fontSize: 15,
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 20,
+                                    ),
+                                    child: Text(
+                                      ' We will send you a one time SMS message. Charges may applied.',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                        fontSize: 15,
+                                      ),
+                                      textAlign: TextAlign.center,
                                     ),
                                   )
                                 ],
@@ -121,16 +151,16 @@ class LoginScreen extends StatelessWidget{
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text(" Don't an account ?",style: TextStyle(fontSize: 18),),
+                                  Text(" Have an account ?",style: TextStyle(fontSize: 18),),
                                   FlatButton(child: Text(
-                                    'Sign Up',
+                                    'Login',
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Theme.of(context).primaryColor,
                                     ),
                                   ),
                                     onPressed: () {
-                                      Navigator.of(context).pushNamed(SignupScreen.routeName);
+                                      Navigator.of(context).pushNamed(LoginScreen.routeName);
                                     },
                                   ),
                                 ],
@@ -144,8 +174,8 @@ class LoginScreen extends StatelessWidget{
                 ),
 
               );
-          },
-        )
+            },
+          )
       ),
     );
   }

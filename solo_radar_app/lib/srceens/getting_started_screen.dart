@@ -5,6 +5,7 @@ import 'package:soloradarapp/srceens/login_screen.dart';
 import 'package:soloradarapp/widgets/slideitem.dart';
 import 'dart:async';
 import 'package:soloradarapp/widgets/slide_dots.dart';
+import 'package:soloradarapp/srceens/signup_screen.dart';
 
 class GettingStartedScreen extends StatefulWidget {
   @override
@@ -92,7 +93,8 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(SignupScreen.routeName);},
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
                       padding: EdgeInsets.all(0.0),
                       child: Ink(

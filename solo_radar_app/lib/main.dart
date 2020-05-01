@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:soloradarapp/srceens/getting_started_screen.dart';
 import 'package:soloradarapp/srceens/login_screen.dart';
 import 'package:soloradarapp/srceens/splash_screen.dart';
+import 'package:soloradarapp/srceens/signup_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget{
         primarySwatch: Colors.lightBlue,
       ),
       //home: SplashScreen(),
-      home: LoginScreen(),
+      home: SignupScreen(),
       routes: {
         LoginScreen.routeName: (ctx) => LoginScreen(),
+        SignupScreen.routeName: (ctx) => SignupScreen(),
       },
     );
   }
